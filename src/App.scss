@@ -1,0 +1,74 @@
+.App {
+  display: flex;
+  height: 100%;
+  .showcase {
+    box-sizing: border-box;
+    flex-grow: 1;
+    width: 100px;
+  }
+  .code {
+    flex-grow: 1;
+    width: 100px;
+    .block {
+      height: 40vh;
+    }
+  }
+  h2{
+    margin-left: 16px;
+  }
+  .block {
+    margin: 16px;
+    box-sizing: border-box;
+  }
+  pre {
+    margin: 0;
+    padding: 0;
+  }
+  .block {
+    input,
+    button {
+      margin: 12px;
+
+      align-items: center;
+      appearance: none;
+      background-color: #fff;
+      border: 1px solid #dbdbdb;
+      border-radius: 0.375em;
+      box-shadow: none;
+      box-sizing: border-box;
+      color: #363636;
+      cursor: pointer;
+      display: inline-flex;
+      font-size: 1rem;
+      height: 2.5em;
+      justify-content: center;
+      line-height: 1.5;
+      padding: calc(0.5em - 1px) 1em;
+      position: relative;
+      text-align: center;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      vertical-align: top;
+      white-space: nowrap;
+    }
+
+    .button:active {
+      border-color: #4a4a4a;
+      outline: 0;
+    }
+
+    .button:focus {
+      border-color: #485fc7;
+      outline: 0;
+    }
+
+    .button:hover {
+      border-color: #b5b5b5;
+    }
+
+    .button:focus:not(:active) {
+      box-shadow: rgba(72, 95, 199, 0.25) 0 0 0 0.125em;
+    }
+  }
+}
