@@ -7,7 +7,16 @@ export default defineConfig(({ mode }) => {
   console.log('mode', mode)
   const config = {
     plugins: [react()],
-    build: {
+  }
+  if (mode === 'production') {
+    config.build = {
+      lib: {
+        // Could also be a dictionary or array of multiple entry points
+        entry: resolve(__dirname, 'src/MindElixirReact.jsx'),
+        name: 'MindElixirReact',
+        // the proper extensions will be added
+        fileName: 'mind-elixir-react',
+      },
       rollupOptions: {
         // make sure to externalize deps that shouldn't be bundled
         // into your library
@@ -18,15 +27,6 @@ export default defineConfig(({ mode }) => {
           globals: {},
         },
       },
-    },
-  }
-  if (mode === 'production') {
-    config.build.lib = {
-      // Could also be a dictionary or array of multiple entry points
-      entry: resolve(__dirname, 'src/MindElixirReact.jsx'),
-      name: 'MindElixirReact',
-      // the proper extensions will be added
-      fileName: 'mind-elixir-react',
     }
   }
   return config
