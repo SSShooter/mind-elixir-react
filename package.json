@@ -1,5 +1,6 @@
 {
   "name": "mind-elixir-react",
+  "repository": "github:SSShooter/mind-elixir-react",
   "type": "module",
   "files": [
     "dist"
@@ -12,7 +13,7 @@
       "require": "./dist/mind-elixir-react.umd.cjs"
     }
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
